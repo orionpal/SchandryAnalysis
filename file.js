@@ -10,7 +10,7 @@ document.getElementById('file').onchange = function(){
     // split the file by lines
     var lines = this.result.split('\n');
     // go through lines and count words (saved in words)
-    for(var line = 0; line < 2; line++){
+    for(var line = 0; line < 20; line++){
       var entry = lines[line]; //get specified entry on line "line"
       var i = 0;
       while (i<entry.length){
@@ -51,7 +51,6 @@ document.getElementById('file').onchange = function(){
       }
     }
     //show word counts in alphabetical order
-    console.log(words)
     var justWords = Object.keys(words);
     justWords.sort();
 

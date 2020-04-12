@@ -1,9 +1,30 @@
-#content {
-	border-style: groove;	
+#file{
+	padding: 5;
 }
-#word{
-	float: left;
+#tabs{
+	border-style: groove;
+	padding: 10;
+	width: 300;
 }
-#count{
+#words,#entries{
+	padding: 10;
+	color: white;
+	background: grey
+}
+#content{
+	float:left;
+	border-style: groove;
+	padding: 10;
+	background: lightgrey;
+	min-width: 300;
+}
+#current{
+	float: right;
+	top-margin: 100;
+	padding: 10;
+	background: lightgrey;
+	min-width: 300;
+}
+#add{
 
 }

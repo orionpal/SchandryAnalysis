@@ -6,11 +6,22 @@
 	</TITLE>
 </HEAD>
 <body>
+	<p>
 	<input type="file" name="file" id="file">
-	<script src="file.js"></script>
-	<div id="content">
-		<div id="word"></div>
-		<div id="count"></div>
+	</p>
+	<div id="current">
+		<b>Currently Selected Words</b>
+		<hr>
 	</div>
+	<div id="tabs">
+		<input type="button" id="words" value="Show All Unique Words" onclick="showWords();">
+		<input type="button" id="entries" value="Show Entries" onclick="showEntries()">
+	</div>
+	<div id="content">
+	</div>
+
+	<script src="words.js"></script>
+	<script src="readFile.js"></script>
+	<script src="visuals.js"></script>
 </body>
 </HTML>
