@@ -13,15 +13,20 @@
 }
 #content{
 	float:left;
+	overflow:auto;
 	border-style: groove;
 	padding: 10;
 	background: lightgrey;
 	min-width: 300;
+	max-height: 500;
 }
 #current{
-	float: right;
+	position: fixed;
+	top:0;
+	right:0;
 	top-margin: 100;
 	padding: 10;
+	border-style: groove;
 	background: lightgrey;
 	min-width: 300;
 }

@@ -1,12 +1,13 @@
 //references readFile.js: array[]: entries
 var eSaved = []; //indexes of the saved entries
 var words = {}; //unique words and their count found in some file
+var justWords = []; //array of just the words (no counts)
 var selected = {}; //selected words to be used for search in entries of the file
 /*
 var TIwords = {};
 var ABwords = {};
 */
-//find words from titles and sticks them in var: words
+//find words from titles and sticks them in var: words, also sticks the key values in var: justWords
 function findWords(){
 	words = {};
 	for (var e=0; e<entries.length; e++){
@@ -32,6 +33,8 @@ function findWords(){
 			}
 		}
 	}
+	justWords = Object.keys(words);
+	justWords.sort();
 }
 function findEntries(){
 	eSaved = [];
@@ -65,10 +68,11 @@ function fullString(i){
 	}
 	return str;
 }
+//***uppercase and lowercase issue***
 function hasSelected(str){
 	var has = false;
 	for (word in selected){
-		has = (has || str.includes(word))
+		has = (has || str.toLowerCase().includes(word)) //
 	}
 	return has;
 }

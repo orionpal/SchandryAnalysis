@@ -13,6 +13,7 @@ IS - ?
 BP - ?
 */
 var entries = [];
+
 document.getElementById('file').onchange = function(){
   entries = [];
   //get the file that was selected
@@ -33,7 +34,7 @@ document.getElementById('file').onchange = function(){
 			var part = ''
 			while (end < entry.length){
 					//find next tag as end point
-					if (entry.substring(end,end+2)==tag){
+					if (entry.substring(end,end+3)==tag){
 						part = entry.substring(start,end);
 						start = end+3;
 						end = start;
@@ -45,19 +46,19 @@ document.getElementById('file').onchange = function(){
 		}
 		while (start<entry.length){
 			//find AU as first tag
-			if (entry.substring(start,start+2)=="AU"){
+			if (entry.substring(start,start+3)=="AU "){
 				start = start+3;
 				end = start;
-				var tAU = getPart("TI");//get AU
-				var tTI = getPart("SO");//get SO
-				var tSO = getPart("AB");//find TI
-				var tAB = getPart("SN");//find AB
-				var tSN = getPart("PD");//find SN
-				var tPD = getPart("PY");//find PD
-				var tPY = getPart("VL");//find PY
-				var tVL = getPart("IS");//find VL
-				var tIS = getPart("BP");//find IS
-				var tBP = getPart("EP");//find BP
+				var tAU = getPart("TI ");//get AU
+				var tTI = getPart("SO ");//get SO
+				var tSO = getPart("AB ");//find TI
+				var tAB = getPart("SN ");//find AB
+				var tSN = getPart("PD ");//find SN
+				var tPD = getPart("PY ");//find PD
+				var tPY = getPart("VL ");//find PY
+				var tVL = getPart("IS ");//find VL
+				var tIS = getPart("BP ");//find IS
+				var tBP = getPart("EP ");//find BP
 				var tEP = entry.substring(start);//get EP
 				break;
 			}
